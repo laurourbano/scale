@@ -1,0 +1,15 @@
+.spacer {
+  flex: 1 1 auto;
+}
+span {
+  cursor: pointer;
+}
+.effect-btn {
+  &:hover {
+    color: #ddd;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}

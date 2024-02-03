@@ -1,0 +1,11 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z10">
+  @for (column of tableColumns; track $index) {
+  <ng-container [matColumnDef]="column.def">
+    <mat-header-cell *matHeaderCellDef> {{ column.label }} </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{ row[column.dataKey] }} </mat-cell>
+  </ng-container>
+  }
+
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+</mat-table>
