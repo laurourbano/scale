@@ -4,4 +4,5 @@ export interface Scale {
   saidaIntervalo?: string;
   entradaIntervalo?: string;
   saida: string;
+  actions?: string[];
 }

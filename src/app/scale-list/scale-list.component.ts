@@ -17,11 +17,19 @@ export class ScaleListComponent {
       id: '1',
       entrada: '08:00',
       saida: '19:00',
+      actions: ['actions', 'actions'],
     },
     {
       id: '2',
       entrada: '08:00',
       saida: '22:00',
+      actions: ['actions', 'actions'],
+    },
+    {
+      id: '3',
+      entrada: '08:00',
+      saida: '17:00',
+      actions: ['actions', 'actions'],
     },
   ];
 
@@ -40,10 +48,12 @@ export class ScaleListComponent {
         dataKey: 'entradaIntervalo',
       },
       { label: 'Saída', def: 'saida', dataKey: 'saida' },
+      { label: 'Ações', def: 'actions', dataKey: 'actions' },
     ];
   }
 
   ngOnInit(): void {
     this.setTableColumns();
   }
+  
 }

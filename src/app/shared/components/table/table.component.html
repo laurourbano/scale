@@ -2,7 +2,21 @@
   @for (column of tableColumns; track $index) {
   <ng-container [matColumnDef]="column.def">
     <mat-header-cell *matHeaderCellDef> {{ column.label }} </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{ row[column.dataKey] }} </mat-cell>
+    <mat-cell *matCellDef="let row">
+        @if(column.def !== 'actions'){
+        <ng-container>
+          {{ row[column.dataKey] }} </ng-container
+        >} @else{ @if(row[column.dataKey]){
+        <ng-container>
+          <button mat-icon-button color="primary" (click)="onEdit(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(row)">
+            <mat-icon>delete</mat-icon>
+          </button> </ng-container
+        >} }
+
+    </mat-cell>
   </ng-container>
   }
 

@@ -19,6 +19,7 @@ export class EmployeesListComponent {
       saidaIntervalo: '11:00',
       entradaIntervalo: '12:00',
       saida: '18:00',
+      actions: ['actions', 'actions'],
     },
     {
       nome: 'Diógenes',
@@ -26,6 +27,15 @@ export class EmployeesListComponent {
       saidaIntervalo: '14:00',
       entradaIntervalo: '14:30',
       saida: '22:00',
+      actions: ['actions', 'actions'],
+    },
+    {
+      nome: 'Rafael',
+      entrada: '08:00',
+      saidaIntervalo: '12:00',
+      entradaIntervalo: '13:00',
+      saida: '17:00',
+      actions: ['actions', 'actions'],
     },
   ];
 
@@ -44,6 +54,7 @@ export class EmployeesListComponent {
         dataKey: 'entradaIntervalo',
       },
       { label: 'Saída', def: 'saida', dataKey: 'saida' },
+      { label: 'Ações', def: 'actions', dataKey: 'actions' },
     ];
   }
 
